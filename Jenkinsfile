@@ -7,11 +7,6 @@ pipeline {
                 git branch: 'develop', url: 'https://github.com/EusebioAjas/node-docker.git'
             }
         }
-        stage('construir app') {
-            steps {
-                echo 'Construyendo aplicación...'
-            }
-        }
         stage('Ejecutar los test cases') {
             steps {
                 sh 'node --test'
